@@ -241,6 +241,62 @@ body#home #navhome, body#about #navabout, body#photography #navphotography, body
 	padding: 5px 0;
 	font-weight: bold;
 }
+@media (min-width: 991px) and (max-width: 1090px) {
+.well-lg {
+	margin-top:1%;
+	margin-left:5%;
+	width:90%;
+height:500px;
+background-color:#FFFFFF;	
+} }
+@media (min-width: 740px) and (max-width: 990px) {
+.well-lg {
+	margin-top:1%;
+	margin-left:5%;
+	width:90%;
+height:500px;
+background-color:#FFFFFF;	
+} }
+@media (min-width: 300px) and (max-width: 739px) {
+.well-lg {
+	margin-top:1%;
+	margin-left:5%;
+	width:90%;
+height:500px;
+background-color:#FFFFFF;	
+} }
+#background2 {
+  width: 80%;
+  height: 1150px;
+  background-color: #F4F4F4;
+  text-align: center;
+  margin-left: 10%;
+  border-radius: 25px; }
+
+@media (min-width: 975px) and (max-width: 1270px) {
+  #background2 {
+    width: 80%;
+    height: 1000px;
+    background-color: #F4F4F4;
+    text-align: center;
+    margin-left: 10%;
+    border-radius: 25px; } }
+@media (min-width: 740px) and (max-width: 990px) {
+  #background2 {
+    width: 80%;
+    height: 1200px;
+    background-color: #F4F4F4;
+    text-align: center;
+    margin-left: 10%;
+    border-radius: 25px; } }
+@media (min-width: 300px) and (max-width: 739px) {
+  #background2 {
+    width: 90%;
+    height: 1100px;
+    background-color: #F4F4F4;
+    text-align: center;
+    margin-left: 5%;
+    border-radius: 25px; } }
 
 </style>
     <meta charset="utf-8">
@@ -251,7 +307,7 @@ body#home #navhome, body#about #navabout, body#photography #navphotography, body
     <meta name="author" content="">
     
 
-    <title>Home</title>
+    <title>About</title>
  
 
     <!-- Custom styles for this template -->
@@ -261,9 +317,11 @@ body#home #navhome, body#about #navabout, body#photography #navphotography, body
   </head>
 
   <body>
+  
       <div id="backcolor">
+      
         
-          <div id="background">
+          <div id="background2">
 <div id="logo">
     <a href="default.html"><img src="Images/kelly%20logo%20gold.png" alt="logo"></a>
 </div>
@@ -283,20 +341,39 @@ body#home #navhome, body#about #navabout, body#photography #navphotography, body
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="index.php">Home <span class="sr-only">(current)</span></a></li>
+        <li><a href="index.php">Home <span class="sr-only">(current)</span></a></li>
         
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Jewelry <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Beeds</a></li>
             <li><a href="bracelets/bracelets.php">Bracelets</a></li>
             <li><a href="earrings/earrings.php">Earrings</a></li>
             <li><a href="necklaces/necklaces.php">Necklaces</a></li>
             
           </ul>
-          <li><a href="about.php">Our Story</a></li>
-          <li><a href="#">Gallery</a></li>
+          <li class="active"><a href="about.php">Our Story</a></li>
+          <li><a href="product.php">Sales</a></li>
           <li><a href="contact.php">Contact</a></li>
+          <li><a href="login.php" data-toggle="modal" data-target="#login-modal">Login</a></li>
+
+<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    	  <div class="modal-dialog">
+				<div class="loginmodal-container">
+					<h1>Login to Your Account</h1><br>
+				  <form>
+					<input type="text" name="user" placeholder="Username">
+					<input type="password" name="pass" placeholder="Password">
+					<input type="submit" name="login" class="login loginmodal-submit" value="Login">
+				  </form>
+					
+				  <div class="login-help">
+					<a href="#">Register</a> - <a href="#">Forgot Password</a>
+				  </div>
+				</div>
+			</div>
+		  </div>
+        </li>
+      </ul>
         </li>
       </ul>
      
@@ -305,11 +382,13 @@ body#home #navhome, body#about #navabout, body#photography #navphotography, body
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-<div id="whitebackground">
-<h1>About Kelly</h1>
+<div class="page-header">
+  <h1>About Kelly</h1>
+</div>
+<div class="well well-lg">
 <div class="row">
   <div class="col-md-6"><div id="kellypicture">
-<img src="Images/kelly.png" alt="kelly" width="150%" height="150%">
+  <a href="#" data-toggle="tooltip" title="   Kelly and her daughter!"><img src="Images/kelly.png" alt="kelly" width="120%" height="120%"></a>
 </div>
 </div>
   <div class="col-md-6"><div id="kellytext">

@@ -203,15 +203,34 @@ $('.dropdown-toggle').dropdown()
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Jewelry <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Beeds</a></li>
             <li class="active"><a href="bracelets.php">Bracelets</a></li>
-            <li><a href="earrings/earrings.php">Earrings</a></li>
-            <li><a href="necklaces/necklaces.php">Necklaces</a></li>
+            <li><a href="../../earrings/earrings.php">Earrings</a></li>
+            <li><a href="../../necklaces/necklaces.php">Necklaces</a></li>
             
           </ul>
-          <li><a href="about.php">Our Story</a></li>
-          <li><a href="#">Gallery</a></li>
-          <li><a href="contact.php">Contact</a></li>
+          <li><a href="../../about.php">Our Story</a></li>
+          <li><a href="../../product.php">Sales</a></li>
+          <li><a href="../../contact.php">Contact</a></li>
+           <li><a href="login.php" data-toggle="modal" data-target="#login-modal">Login</a></li>
+
+<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    	  <div class="modal-dialog">
+				<div class="loginmodal-container">
+					<h1>Login to Your Account</h1><br>
+				  <form>
+					<input type="text" name="user" placeholder="Username">
+					<input type="password" name="pass" placeholder="Password">
+					<input type="submit" name="login" class="login loginmodal-submit" value="Login">
+				  </form>
+					
+				  <div class="login-help">
+					<a href="#">Register</a> - <a href="#">Forgot Password</a>
+				  </div>
+				</div>
+			</div>
+		  </div>
+        </li>
+      </ul>
         </li>
       </ul>
      

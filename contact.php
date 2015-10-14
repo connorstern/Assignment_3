@@ -1,3 +1,6 @@
+<?php
+include ('contact2.php');
+?>
 <!DOCTYPE html>
 
 <html lang="en"><head>
@@ -241,7 +244,21 @@ body#home #navhome, body#about #navabout, body#photography #navphotography, body
 	padding: 5px 0;
 	font-weight: bold;
 }
-
+#background2 {
+  width: 80%;
+  height: 900px;
+  background-color: #F4F4F4;
+  text-align: center;
+  margin-left: 10%;
+  border-radius: 25px; }
+#whitebackground2 {
+	width:80%;
+	height:400px;
+	background-color:#FFFFFF;
+	margin-left:10%;
+	margin-top:1%;
+	border-radius:25px;
+}
 </style>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -251,7 +268,7 @@ body#home #navhome, body#about #navabout, body#photography #navphotography, body
     <meta name="author" content="">
     
 
-    <title>Home</title>
+    <title>Contact</title>
  
 
     <!-- Custom styles for this template -->
@@ -263,7 +280,7 @@ body#home #navhome, body#about #navabout, body#photography #navphotography, body
   <body>
       <div id="backcolor">
         
-          <div id="background">
+          <div id="background2">
 <div id="logo">
     <a href="default.html"><img src="Images/kelly%20logo%20gold.png" alt="logo"></a>
 </div>
@@ -283,20 +300,39 @@ body#home #navhome, body#about #navabout, body#photography #navphotography, body
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="index.php">Home <span class="sr-only">(current)</span></a></li>
+        <li><a href="index.php">Home <span class="sr-only">(current)</span></a></li>
         
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Jewelry <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Beeds</a></li>
             <li><a href="bracelets/bracelets.php">Bracelets</a></li>
             <li><a href="earrings/earrings.php">Earrings</a></li>
             <li><a href="necklaces/necklaces.php">Necklaces</a></li>
             
           </ul>
           <li><a href="about.php">Our Story</a></li>
-          <li><a href="#">Gallery</a></li>
-          <li><a href="contact.php">Contact</a></li>
+          <li><a href="product.php">Sales</a></li>
+          <li class="active"><a href="contact.php">Contact</a></li>
+          <li><a href="login.php" data-toggle="modal" data-target="#login-modal">Login</a></li>
+
+<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    	  <div class="modal-dialog">
+				<div class="loginmodal-container">
+					<h1>Login to Your Account</h1><br>
+				  <form>
+					<input type="text" name="user" placeholder="Username">
+					<input type="password" name="pass" placeholder="Password">
+					<input type="submit" name="login" class="login loginmodal-submit" value="Login">
+				  </form>
+					
+				  <div class="login-help">
+					<a href="#">Register</a> - <a href="#">Forgot Password</a>
+				  </div>
+				</div>
+			</div>
+		  </div>
+        </li>
+      </ul>
         </li>
       </ul>
      
@@ -305,90 +341,67 @@ body#home #navhome, body#about #navabout, body#photography #navphotography, body
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
+
 <div id="content">
-<div id="slideshow">
-<script src="js/bootstrap.js" type="text/javascript"></script>
-<script type="text/javascript">
-$('.dropdown-toggle').dropdown()
-</script>
-
-<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-  </ol>
-
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner" role="listbox">
-    <div class="item active">
-      <img src="Images/slideshow/jewelry1.png" alt="1">
-      <div class="carousel-caption">
-        ...
+ <section>
+ <div class="page-header">
+  <h1>Contact</h1>
+</div>
+ <div id="whitebackground2">
+      <div class="container-form">
+     <form class="form-horizontal" role="form" method="post" action="contact.php">
+          <div class="form-group">
+            <label for="name" class="col-sm-2 control-label"><div class='black'>Name</div></label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" name="name" id="name"
+                     
+                     value="<?php if(isset($_POST['name'])){echo htmlspecialchars($_POST['name']);} ?>"   
+                     
+                     > 
+              <?php if(isset($errName)){echo "<p class='text-danger'>$errName</p>";}?>
+                
+            </div>
+            </div>
+          <div class="form-group">
+            <label for="email" class="col-sm-2 control-label"><div class='black'>Email</div></label>
+            <div class="col-sm-10">
+              <input type="email" class="form-control" name="email" id="email" 
+                     value="<?php if(isset($_POST['email'])){echo htmlspecialchars($_POST['email']);} ?>   ">
+                
+                <?php if(isset($errEmail)){echo "<p class='text-danger'>$errEmail</p>";}?>
+            </div>
+          </div>
+          <div class="form-group">
+			<label for="message" class="col-sm-2 control-label"><div class='black'>Message</div></label>
+			<div class="col-sm-10">
+			<textarea class="form-control" name="message" rows="4" placeholder="Enter message here..."><?php if(isset($_POST['message'])){echo 						 			$_POST['message'];} ?></textarea>
+			<?php if(isset($errMessage)){echo "<p class='text-danger'>$errMessage</p>";} ?>
+			</div>
+			</div>
+          <div class="form-group">
+            <label for="human" class="col-sm-2 control-label" value="<?php if(isset($_POST['human'])){echo htmlspecialchars($_POST['human']);} ?>   "><div class='black'>2 + 3 = ?</div></label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" name="human" id="human" placeholder="Your Answer" value="<?php if(isset($_POST['email'])){ echo htmlspecialchars($_POST['human']);} ?>   ">
+                <?php if(isset($errHuman)){echo "<p class='text-danger'>$errHuman</p>";} ?>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <div class="center"><button type="input" name="submit" class="btn btn-default"><div class='black'>Send</div></button></div>
+            </div>
+          </div>
+          <div class="form-group">    
+            <div class="col-sm-offset-2 col-sm-10">
+               <!-- Will be used to display an alert to the user -->  
+                <?php if(isset($result)){echo "$result";} ?>
+            </div>
+            
+        </form>
+        </div>
       </div>
-    </div>
-    <div class="item">
-      <img src="Images/slideshow/jewelry1.png" alt="2">
-      <div class="carousel-caption">
-        ...
       </div>
-    </div>
-    ...
-  </div>
+    </section>
 
-  <!-- Controls -->
-  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-    
-  </a>
-  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
-
-</div>
-<div id="popular">
-<h1>Most Popular </h1>
-</div>
-<div id="lightbox">
-<ul>
-    <div class="row">
-  <div class="col-md-4">
-        <li>
-			<img src="Images/Bracelets/1.png" width="100%" height="100%"/>
-			<div class="image_title">
-				<h5 class="title">Walking Up</h5>
-			</div>
-		</li>
-        </div>
-  <div class="col-md-4">
-        <li>
-			<img src="Images/Earrings/26.png" width="100%" height="100%"/>
-			<div class="image_title">
-				<h5 class="title">Looking Down</h5>
-			</div>
-		</li>
-        </div>
-  <div class="col-md-4">
-        <li>
-			<img src="Images/Earrings/7.png" width="100%" height="100%">
-			<div class="image_title">
-				<h5 class="title">Skipping Rocks</h5>
-			</div>
-		</li>
-        </div>
-</div>
-    	
- 
-        </ul>
-        </div>
-
-<div id="welcome">
-<h2>Welcome</h2>
-<p class="welcome">Welcome to my website! Terra Luna specializes in one of-a-kind lampworking beads and PMC jewelry inspired by the beauty of nature. Terra Luna is a working studio and a philosophy. My pieces are at once rooted to objects found on earth, such as, seed pods, shells, and flowers, but my work also tries to express the sense of mystery and luminosity of the moon.</p>
 </div>
 </div>
 </div>

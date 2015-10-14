@@ -1,11 +1,7 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>About Us</title>
-<link href="CSS/stylesheet.css" rel="stylesheet" type="text/css">
+<!DOCTYPE html>
 
-<style>
+<html lang="en"><head>
+      <style>
 body#home #navhome, body#about #navabout, body#photography #navphotography, body#websites #navwebsites, body#contact #navcontact, body#resume #navresume {
 	color:#941512;
 }
@@ -15,7 +11,32 @@ body#home #navhome, body#about #navabout, body#photography #navphotography, body
 #lightbox {
 	float:left;
 	width:100%;
-	margin-left:11.5%;
+	margin-left:5.5%;
+	margin-top:1%;
+}
+@media (min-width: 975px) and (max-width: 1270px) {
+	#lightbox {
+	float:left;
+	width:100%;
+	margin-left:1%;
+	margin-top:1%;
+}
+}
+@media (min-width: 740px) and (max-width: 974px) {
+	#lightbox {
+	float:left;
+	width:100%;
+	margin-left:4%;
+	margin-top:1%;
+}
+}
+@media (min-width: 300px) and (max-width: 739px) {
+	#lightbox {
+	float:left;
+	width:100%;
+	margin-left:18%;
+	margin-top:1%;
+}
 }
 #lightbox h1 {
 	text-transform: uppercase;
@@ -34,10 +55,35 @@ body#home #navhome, body#about #navabout, body#photography #navphotography, body
 /*Image styles*/
 #lightbox ul li {
 	float: left;
-	padding-right:13%;
+	padding-right:5%;
 	list-style-type: none;
 	position: relative;
 	cursor: pointer;
+}
+@media (min-width: 740px) and (max-width: 974px) {
+#lightbox ul li {
+	float: left;
+	padding-right:5%;
+	list-style-type: none;
+	position: relative;
+	cursor: pointer;
+	width:30%;
+	height:30%;
+	margin-right:3%;
+}
+}
+@media (min-width: 300px) and (max-width: 739px) {
+	#lightbox ul li {
+	float: left;
+	padding-right:5%;
+	list-style-type: none;
+	position: relative;
+	cursor: pointer;
+	width:70%;
+	height:70%;
+	margin-right:20%;
+	margin-top:8%;
+}
 }
 /*No right margin for images in the 2nd column*/
 #lightbox ul li:nth-child(even) {
@@ -45,11 +91,12 @@ body#home #navhome, body#about #navabout, body#photography #navphotography, body
 }
 #lightbox ul li img {
 	display: block;
+	border-radius:25px;
 }
 
 /*Image titles*/
 #lightbox .image_title {
-	width: 320px; height: 220px;
+	width: 260px; height: 252px;
 	background: rgba(0, 0, 0, 0.5);
 	position: absolute;
 	top: 0; left: 0;
@@ -57,6 +104,33 @@ body#home #navhome, body#about #navabout, body#photography #navphotography, body
 	/*Hover effect - default state*/
 	opacity: 0;
 	transition: all 0.5s;
+	border-radius:25px;
+}
+@media (min-width: 740px) and (max-width: 974px) {
+#lightbox .image_title {
+	width: 192px; height: 252px;
+	background: rgba(0, 0, 0, 0.5);
+	position: absolute;
+	top: 0; left: 0;
+	display: table;
+	/*Hover effect - default state*/
+	opacity: 0;
+	transition: all 0.5s;
+	border-radius:25px;
+}
+}
+@media (min-width: 300px) and (max-width: 739px) {
+#lightbox .image_title {
+	width: 270px; height: 265px;
+	background: rgba(0, 0, 0, 0.5);
+	position: absolute;
+	top: 0; left: 0;
+	display: table;
+	/*Hover effect - default state*/
+	opacity: 0;
+	transition: all 0.5s;
+	border-radius:25px;
+}
 }
 #lightbox .title {
 	color: #fff;
@@ -70,6 +144,8 @@ body#home #navhome, body#about #navabout, body#photography #navphotography, body
 	/*Hover effect - default state*/
 	transform: scale(0.2);
 	transition: all 0.25s;
+	margin-left:80px;
+	margin-top:110px;
 }
 /*Zoom icon over each title using iconfont and pseudo elements*/
 #lightbox .title::before {
@@ -165,64 +241,171 @@ body#home #navhome, body#about #navabout, body#photography #navphotography, body
 	padding: 5px 0;
 	font-weight: bold;
 }
-
-#background2 {
-	width:1300px;
-	height:900px;
-	background-color:#F4F4F4;
-	text-align:center;
-	margin-left:9%;
-	margin-top:1.5%;
-	border-radius:25px;
-}
-#kelly2 {
-	width:100%;
-	margin-left:5%;
-}
-#whitebackground2 {
-	width:900px;
-	height:650px;
-	background-color:#FFFFFF;
-	margin-left:15%;
+@media (min-width: 991px) and (max-width: 1090px) {
+.well-lg {
 	margin-top:1%;
-	border-radius:25px;
-}
-#kellypicture2 {
+	margin-left:5%;
+	width:90%;
+height:500px;
+background-color:#FFFFFF;	
+} }
+@media (min-width: 740px) and (max-width: 990px) {
+.well-lg {
+	margin-top:1%;
+	margin-left:5%;
+	width:90%;
+height:500px;
+background-color:#FFFFFF;	
+} }
+@media (min-width: 300px) and (max-width: 739px) {
+.well-lg {
+	margin-top:1%;
+	margin-left:5%;
+	width:90%;
+height:500px;
+background-color:#FFFFFF;	
+} }
+#background2 {
+  width: 80%;
+  height: 1150px;
+  background-color: #F4F4F4;
+  text-align: center;
+  margin-left: 10%;
+  border-radius: 25px; }
+
+@media (min-width: 975px) and (max-width: 1270px) {
+  #background2 {
+    width: 80%;
+    height: 1000px;
+    background-color: #F4F4F4;
+    text-align: center;
+    margin-left: 10%;
+    border-radius: 25px; } }
+@media (min-width: 740px) and (max-width: 990px) {
+  #background2 {
+    width: 80%;
+    height: 1200px;
+    background-color: #F4F4F4;
+    text-align: center;
+    margin-left: 10%;
+    border-radius: 25px; } }
+@media (min-width: 300px) and (max-width: 739px) {
+  #background2 {
+    width: 90%;
+    height: 1100px;
+    background-color: #F4F4F4;
+    text-align: center;
+    margin-left: 5%;
+    border-radius: 25px; } }
+@media (min-width: 500px) and (max-width: 974px) {
+	.statement {
+	width:100%;
 	float:left;
-	margin-top:15%;
+	text-align:justify;
+	margin-top:1%;
+	margin-left:.6%;
+	font-size:.7em;
+	word-spacing:2px;
+}
+}
+@media (min-width: 100px) and (max-width: 499px) {
+	.statement {
+	width:85%;
+	float:left;
+	text-align:justify;
+	margin-top:1%;
+	font-size:.53em;
+	word-spacing:2px;
+}
 }
 </style>
-</head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
 
-<body>
-<div id="background2">
-<div id="logo">
-<a href="index.php"><img src="Images/kelly logo gold.png" alt="logo">
-</div>
-<div id="underline">
-<div class="menu-wrap">
-    <nav class="menu">
-        <ul class="clearfix">
-            <li><a href="index.php">Home</a></li>
-            <li>
-                <a href="#">Jewelry <span class="arrow">&#9660;</span></a>
+    <title>About</title>
  
-                <ul class="sub-menu">
-                    <li><a href="bracelets/bracelets.php">Bracelets</a></li>
-                    <li><a href="necklaces/necklaces.php">Necklaces</a></li>
-                    <li><a href="earrings/earrings.php">Earrings</a></li>
-                    <li><a href="beeds.php">Beeds</a></li>
-                </ul>
-            </li>
-            <li><a href="about.php">Our Story</a></li>
-            <li class="current-item"><a href="#">Gallery</a></li>
-            <li><a href="contact.php">Contact</a></li>
-        </ul>
-    </nav>
+
+    <!-- Custom styles for this template -->
+    <link href="CSS/stylesheet.css" rel="stylesheet">
+      <link href="CSS/bootstrap.css" rel="stylesheet">
+      
+  </head>
+
+  <body>
+  
+      <div id="backcolor">
+      
+        
+          <div id="background2">
+<div id="logo">
+    <a href="default.html"><img src="Images/kelly%20logo%20gold.png" alt="logo"></a>
 </div>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="index.php">Home <span class="sr-only">(current)</span></a></li>
+        
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Jewelry <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="bracelets/bracelets.php">Bracelets</a></li>
+            <li><a href="earrings/earrings.php">Earrings</a></li>
+            <li><a href="necklaces/necklaces.php">Necklaces</a></li>
+            
+          </ul>
+          <li class="active"><a href="about.php">Our Story</a></li>
+          <li><a href="product.php">Sales</a></li>
+          <li><a href="contact.php">Contact</a></li>
+          <li><a href="login.php" data-toggle="modal" data-target="#login-modal">Login</a></li>
+
+<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    	  <div class="modal-dialog">
+				<div class="loginmodal-container">
+					<h1>Login to Your Account</h1><br>
+				  <form>
+					<input type="text" name="user" placeholder="Username">
+					<input type="password" name="pass" placeholder="Password">
+					<input type="submit" name="login" class="login loginmodal-submit" value="Login">
+				  </form>
+					
+				  <div class="login-help">
+					<a href="#">Register</a> - <a href="#">Forgot Password</a>
+				  </div>
+				</div>
+			</div>
+		  </div>
+        </li>
+      </ul>
+        </li>
+      </ul>
+     
+    
+     
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<div class="page-header">
+  <h1>About Kelly</h1>
 </div>
-<div id="whitebackground2">
-<h1>About Kelly</h1>
+<div class="well well-lg">
 <div id="kelly2">
 <div id="kellytext2">
 <p class="statement">Magic happens when the power of flame can turn a solid piece of glass into a substance that can be manipulated into a completely new form. It was this curiosity with the properties of glass, along with my bead fascination, that lead me to start creating my own lampworking beads. Lampworking beads are created using an oxygen and propane torch and glass rods. The rods are heated until the glass resembles honey. The molten glass is wrapped around a steel mandrel then shaped into the desired form. The beads are annealed in a kiln to slowly cool and “temper” the glass. To complete my beads, I saw, file, and fit each bead individually with sterling silver tubing.</p>
@@ -246,7 +429,14 @@ Designed by ©Connor Stern
 </div>
 </div>
  
-        
+              
+            
 
-</body>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+  </body>
 </html>

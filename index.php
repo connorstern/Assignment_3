@@ -72,16 +72,28 @@ body#home #navhome, body#about #navabout, body#photography #navphotography, body
 	margin-right:3%;
 }
 }
-@media (min-width: 300px) and (max-width: 739px) {
+@media (min-width: 500px) and (max-width: 739px) {
 	#lightbox ul li {
 	float: left;
 	padding-right:5%;
 	list-style-type: none;
 	position: relative;
 	cursor: pointer;
-	width:70%;
+	width:50%;
+	height:50%;
+	margin-right:15%;
+	margin-top:8%;
+}
+}
+@media (min-width: 300px) and (max-width: 499px) {
+	#lightbox ul li {
+	float: left;
+	padding-right:5%;
+	list-style-type: none;
+	position: relative;
+	cursor: pointer;
+	width:65%;
 	height:70%;
-	margin-right:20%;
 	margin-top:8%;
 }
 }
@@ -108,7 +120,7 @@ body#home #navhome, body#about #navabout, body#photography #navphotography, body
 }
 @media (min-width: 740px) and (max-width: 974px) {
 #lightbox .image_title {
-	width: 192px; height: 252px;
+	width: 200px; height: 252px;
 	background: rgba(0, 0, 0, 0.5);
 	position: absolute;
 	top: 0; left: 0;
@@ -121,7 +133,7 @@ body#home #navhome, body#about #navabout, body#photography #navphotography, body
 }
 @media (min-width: 300px) and (max-width: 739px) {
 #lightbox .image_title {
-	width: 270px; height: 265px;
+	width: 225px; height: 225px;
 	background: rgba(0, 0, 0, 0.5);
 	position: absolute;
 	top: 0; left: 0;
@@ -288,15 +300,32 @@ body#home #navhome, body#about #navabout, body#photography #navphotography, body
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Jewelry <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Beeds</a></li>
             <li><a href="bracelets/bracelets.php">Bracelets</a></li>
             <li><a href="earrings/earrings.php">Earrings</a></li>
             <li><a href="necklaces/necklaces.php">Necklaces</a></li>
             
           </ul>
           <li><a href="about.php">Our Story</a></li>
-          <li><a href="#">Gallery</a></li>
+          <li><a href="product.php">Sales</a></li>
           <li><a href="contact.php">Contact</a></li>
+          <li><a href="login.php" data-toggle="modal" data-target="#login-modal">Login</a></li>
+
+<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    	  <div class="modal-dialog">
+				<div class="loginmodal-container">
+					<h1>Login to Your Account</h1><br>
+				  <form>
+					<input type="text" name="user" placeholder="Username">
+					<input type="password" name="pass" placeholder="Password">
+					<input type="submit" name="login" class="login loginmodal-submit" value="Login">
+				  </form>
+					
+				  <div class="login-help">
+					<a href="#">Register</a> - <a href="#">Forgot Password</a>
+				  </div>
+				</div>
+			</div>
+		  </div>
         </li>
       </ul>
      
@@ -311,7 +340,7 @@ body#home #navhome, body#about #navabout, body#photography #navphotography, body
 <script type="text/javascript">
 $('.dropdown-toggle').dropdown()
 </script>
-
+<div id="section">
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
@@ -323,18 +352,23 @@ $('.dropdown-toggle').dropdown()
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
     <div class="item active">
-      <img src="Images/slideshow/jewelry1.png" alt="1">
+      <img src="Images/slideshow/jewelry1.png" width="100%" alt="1">
       <div class="carousel-caption">
-        ...
       </div>
     </div>
     <div class="item">
-      <img src="Images/slideshow/jewelry1.png" alt="2">
+      <img src="Images/slideshow/jewelry2.png" width="100%" alt="2">
       <div class="carousel-caption">
-        ...
+      
       </div>
     </div>
-    ...
+     <div class="item">
+      <img src="Images/slideshow/jewelry3.png" width="100%" alt="3">
+      <div class="carousel-caption">
+      
+      </div>
+    </div>
+   
   </div>
 
   <!-- Controls -->
@@ -347,6 +381,7 @@ $('.dropdown-toggle').dropdown()
     <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
+</div>
 </div>
 
 </div>

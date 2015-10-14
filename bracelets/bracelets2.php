@@ -1,12 +1,7 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>Bracelets</title>
-<link href="../CSS/stylesheet.css" rel="stylesheet" type="text/css">
-<style>
+<!DOCTYPE html>
 
-<style>
+<html lang="en"><head>
+     <style>
 body#home #navhome, body#about #navabout, body#photography #navphotography, body#websites #navwebsites, body#contact #navcontact, body#resume #navresume {
 	color:#941512;
 }
@@ -23,7 +18,7 @@ body#home #navhome, body#about #navabout, body#photography #navphotography, body
 	#lightbox {
 	float:left;
 	width:100%;
-	margin-left:15%;
+	margin-left:2%;
 	
 }
 }
@@ -31,10 +26,11 @@ body#home #navhome, body#about #navabout, body#photography #navphotography, body
 #lightbox {
 	float:left;
 	width:100%;
-	margin-left:15%;
+	margin-left:1%;
 	
 }
 }
+
 #lightbox h1 {
 	text-transform: uppercase;
 	text-align: center;
@@ -49,6 +45,7 @@ body#home #navhome, body#about #navabout, body#photography #navphotography, body
 #lightbox ul {
 	overflow: hidden;
 }
+
 /*Image styles*/
 #lightbox ul li {
 	float: left;
@@ -58,6 +55,32 @@ body#home #navhome, body#about #navabout, body#photography #navphotography, body
 	position: relative;
 	cursor: pointer;
 }
+@media (min-width: 740px) and (max-width: 990px) {
+	#lightbox ul li {
+	float: left;
+	padding-right:2%;
+	padding-top:2%;
+	list-style-type: none;
+	position: relative;
+	cursor: pointer;
+	width:33%;
+	height:33%;
+}
+}
+@media (min-width: 300px) and (max-width: 739px) {
+#lightbox ul li {
+	float: left;
+	padding-right:2%;
+	padding-top:2%;
+	list-style-type: none;
+	position: relative;
+	cursor: pointer;
+	width:50%;
+	height:50%;
+}
+}
+
+
 /*No right margin for images in the 2nd column*/
 #lightbox ul li:nth-child(even) {
 	margin-right: 0;
@@ -79,6 +102,34 @@ body#home #navhome, body#about #navabout, body#photography #navphotography, body
 	opacity: 0;
 	transition: all 0.5s;
 	border-radius:25px;
+}
+@media (min-width: 740px) and (max-width: 990px) {
+	#lightbox .image_title {
+	width: 190px; height: 190px;
+	background: rgba(0, 0, 0, 0.5);
+	position: absolute;
+	top: 0; left: 0;
+	margin-top:7%;
+	display: table;
+	/*Hover effect - default state*/
+	opacity: 0;
+	transition: all 0.5s;
+	border-radius:25px;
+}
+}
+@media (min-width: 300px) and (max-width: 739px) {
+#lightbox .image_title {
+	width: 120px; height: 120px;
+	background: rgba(0, 0, 0, 0.5);
+	position: absolute;
+	top: 0; left: 0;
+	margin-top:9%;
+	display: table;
+	/*Hover effect - default state*/
+	opacity: 0;
+	transition: all 0.5s;
+	border-radius:25px;
+}
 }
 #lightbox .title {
 	color: #fff;
@@ -179,7 +230,7 @@ body#home #navhome, body#about #navabout, body#photography #navphotography, body
 }
 #background2 {
 	width:80%;
-	height:1300px;
+	height:1400px;
 	background-color:#F4F4F4;
 	text-align:center;
 	margin-left:10%;
@@ -198,8 +249,8 @@ body#home #navhome, body#about #navabout, body#photography #navphotography, body
 @media (min-width: 740px) and (max-width: 990px) {
 	#background2 {
 	width:80%;
-	height:1750px;
-	background-color:red;
+	height:1220px;
+	background-color:#F4F4F4;
 	text-align:center;
 	margin-left:10%;
 	border-radius:25px;
@@ -208,8 +259,8 @@ body#home #navhome, body#about #navabout, body#photography #navphotography, body
 @media (min-width: 300px) and (max-width: 739px) {
 #background2 {
 	width:90%;
-	height:2750px
-	background-color:blue;
+	height:1300px;
+	background-color:#F4F4F4;
 	text-align:center;
 	margin-left:5%;
 	border-radius:25px;
@@ -217,12 +268,21 @@ body#home #navhome, body#about #navabout, body#photography #navphotography, body
 }
 
 </style>
-</head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
 
-<body>
-<!-- Custom styles for this template -->
+    <title>Bracelet</title>
+ 
+
+    <!-- Custom styles for this template -->
     <link href="../CSS/stylesheet.css" rel="stylesheet">
-      <link href="../CSS/bootstrap.css" rel="stylesheet">
+      
+      
   </head>
 
   <body>
@@ -230,12 +290,8 @@ body#home #navhome, body#about #navabout, body#photography #navphotography, body
         
           <div id="background2">
 <div id="logo">
-    <a href="default.html"><img src="../Images/kelly%20logo%20gold.png" alt="logo"></a>
+    <a href="../index.php"><img src="../Images/kelly%20logo%20gold.png" alt="logo"></a>
 </div>
-<script src="../js/bootstrap.js" type="text/javascript"></script>
-<script type="text/javascript">
-$('.dropdown-toggle').dropdown()
-</script>
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -257,15 +313,34 @@ $('.dropdown-toggle').dropdown()
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Jewelry <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Beeds</a></li>
             <li class="active"><a href="bracelets.php">Bracelets</a></li>
-            <li><a href="earrings/earrings.php">Earrings</a></li>
-            <li><a href="necklaces/necklaces.php">Necklaces</a></li>
+            <li><a href="../earrings/earrings.php">Earrings</a></li>
+            <li><a href="../necklaces/necklaces.php">Necklaces</a></li>
             
           </ul>
-          <li><a href="about.php">Our Story</a></li>
-          <li><a href="#">Gallery</a></li>
-          <li><a href="contact.php">Contact</a></li>
+          <li><a href="../about.php">Our Story</a></li>
+          <li><a href="../product.php">Sales</a></li>
+          <li><a href="../contact.php">Contact</a></li>
+          <li><a href="login.php" data-toggle="modal" data-target="#login-modal">Login</a></li>
+
+<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    	  <div class="modal-dialog">
+				<div class="loginmodal-container">
+					<h1>Login to Your Account</h1><br>
+				  <form>
+					<input type="text" name="user" placeholder="Username">
+					<input type="password" name="pass" placeholder="Password">
+					<input type="submit" name="login" class="login loginmodal-submit" value="Login">
+				  </form>
+					
+				  <div class="login-help">
+					<a href="#">Register</a> - <a href="#">Forgot Password</a>
+				  </div>
+				</div>
+			</div>
+		  </div>
+        </li>
+      </ul>
         </li>
       </ul>
      
@@ -274,7 +349,9 @@ $('.dropdown-toggle').dropdown()
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-<h1>Bracelets </h1>
+<div class="page-header">
+  <h1>Bracelets </h1>
+</div>
 <div id="page">
 <ol class="breadcrumb">
 Pages
@@ -288,63 +365,64 @@ Pages
   <div class="col-md-8"><div id="lightbox">
 <ul>
     	<li>
-			<img src="../Images/Bracelets/13.png"/>
+			<img src="../Images/Bracelets/10.png" width="100%" height="100%" />
 			<div class="image_title">
 				<h5 class="title">$40.00</h5>
 			</div>
 		</li>
+        
  
 		<li>
-			<img src="../Images/Bracelets/14.png"/>
+			<img src="../Images/Bracelets/11.png" width="100%" height="100%"/>
 			<div class="image_title">
 				<h5 class="title">$40.00</h5>
 			</div>
 		</li>
 		<li>
-			<img src="../Images/Bracelets/28.png">
+			<img src="../Images/Bracelets/12.png" width="100%" height="100%">
 			<div class="image_title">
 				<h5 class="title">Skipping Rocks</h5>
 			</div>
 		</li>
         <li>
-			<img src="../Images/Bracelets/27.png">
+			<img src="../Images/Bracelets/13.png" width="100%" height="100%">
 			<div class="image_title">
 				<h5 class="title">Skipping Rocks</h5>
 			</div>
 		</li>
         <li>
-			<img src="../Images/Bracelets/16.png"/>
+			<img src="../Images/Bracelets/14.png" width="100%" height="100%"/>
 			<div class="image_title">
 				<h5 class="title">Walking Up</h5>
 			</div>
 		</li>
  
 		<li>
-			<img src="../Images/Bracelets/15.png"/>
+			<img src="../Images/Bracelets/15.png" width="100%" height="100%"/>
 			<div class="image_title">
 				<h5 class="title">Looking Down</h5>
 			</div>
 		</li>
 		<li>
-			<img src="../Images/Bracelets/23.png">
+			<img src="../Images/Bracelets/16.png" width="100%" height="100%">
 			<div class="image_title">
 				<h5 class="title">Skipping Rocks</h5>
 			</div>
 		</li>
         <li>
-			<img src="../Images/Bracelets/17.png">
+			<img src="../Images/Bracelets/17.png" width="100%" height="100%">
 			<div class="image_title">
 				<h5 class="title">Skipping Rocks</h5>
 			</div>
 		</li>
         <li>
-			<img src="../Images/Bracelets/18.png"/>
+			<img src="../Images/Bracelets/18.png" width="100%" height="100%"/>
 			<div class="image_title">
 				<h5 class="title">Walking Up</h5>
 			</div>
 		</li>
+          
         </ul>
-
         </div></div>
   <div class="col-md-4"><div id="sidenav">
   <div class="colors">
@@ -361,7 +439,6 @@ Pages
 </div>
 
 </div>
-
 </div>
 <div id="footer">
 <h3>Connect with us</h3>
